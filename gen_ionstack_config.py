@@ -498,9 +498,10 @@ def main():
             print(f"\n{config_text}")
 
     if errors:
-        print("\n[!] Some symbols could not be resolved. You may need to manually")
-        print("    add them to the config or use a kernel with matching symbols.")
-        sys.exit(1)
+    print("\n[!] Some symbols could not be resolved:")
+    for e in errors:
+        print(f"    {e}")
+    print("[!] Continuing with the symbols that were resolved.")
 
 
 if __name__ == "__main__":
