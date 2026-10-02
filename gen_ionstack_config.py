@@ -484,7 +484,7 @@ def main():
             print(f"  X {e}")
 
     print(f"\n[*] Resolved: {len(results)}/{len(RESOLVE_RULES)} symbols")
-
+    
     # Determine output
     output_path = None
     if len(sys.argv) >= 3 and not sys.argv[2].startswith('--'):
@@ -498,10 +498,10 @@ def main():
             print(f"\n{config_text}")
 
     if errors:
-    print("\n[!] Some symbols could not be resolved:")
-    for e in errors:
-        print(f"    {e}")
-    print("[!] Continuing with the symbols that were resolved.")
+        print("\n[!] Some symbols could not be resolved:")
+        for e in errors:
+            print(f"    {e}")
+        print("[!] Continuing with the symbols that were resolved.")
 
 
 if __name__ == "__main__":
